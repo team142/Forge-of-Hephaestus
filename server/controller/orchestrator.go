@@ -1,11 +1,9 @@
 package controller
 
-import "github.com/team142/Forge-of-Hephaestus/server/repository"
+import (
+	"github.com/team142/Forge-of-Hephaestus/server/repository"
+)
 
 func Orchestrate(state *repository.State) {
-	//TODO:
-	/*
-		- Get all Orchestrations
-		-
-	*/
+	startScheduler(state)
 }

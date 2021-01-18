@@ -1,4 +1,4 @@
-package model
+package domain
 
 import "github.com/team142/Forge-of-Hephaestus/server/util"
 

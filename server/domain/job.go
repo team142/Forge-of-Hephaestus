@@ -1,13 +1,14 @@
-package model
+package domain
 
 /*
 	Overarching job is a particular service carried out by Turtles
 	A consists of a list of tasks. These are determined by its dynamic target
 */
 type Job struct {
-	Name          JobType
-	Tasks         []Task
-	CurrentTaskID string
+	Name              JobType
+	Tasks             []Task
+	CurrentTaskID     string
+	OrchestrationName string
 }
 
 func (j Job) IsActualWorkDone() bool {

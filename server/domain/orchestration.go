@@ -1,4 +1,4 @@
-package model
+package domain
 
 type Orchestration struct {
 	Name              string            `json:"name"`
