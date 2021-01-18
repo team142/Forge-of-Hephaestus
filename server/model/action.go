@@ -29,5 +29,4 @@ type Action struct {
 	ActionType     ActionType
 	DigIfBlocked   bool
 	RetryUntilDone bool
-	RetryLimit     int
 }

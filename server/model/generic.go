@@ -1,4 +1,4 @@
 package model
 
-type FuncInit func(connectionString string, initializeLocations func(locations []NamedLocation))
-type FuncPersist func(connectionString string, locations []NamedLocation)
+type FuncInitNamedLocations func(connectionString string, initializeLocations func(locations []NamedLocation))
+type FuncPersistNamedLocations func(connectionString string, locations []NamedLocation)

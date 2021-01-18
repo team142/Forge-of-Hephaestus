@@ -12,9 +12,9 @@ func NewState() *State {
 }
 
 type State struct {
-	HighwayRepo *GenericRepository
-	OffloadRepo *GenericRepository
-	ParkingRepo *GenericRepository
-	RefuelRepo  *GenericRepository
+	HighwayRepo *GenericNamedLocationRepository
+	OffloadRepo *GenericNamedLocationRepository
+	ParkingRepo *GenericNamedLocationRepository
+	RefuelRepo  *GenericNamedLocationRepository
 	TurtleRepo  *TurtleRepository
 }

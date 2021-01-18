@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 )
 
-var RepositoryPersistToDisk model.FuncPersist = func(connectionString string, locations []model.NamedLocation) {
+var RepositoryPersistToDisk model.FuncPersistNamedLocations = func(connectionString string, locations []model.NamedLocation) {
 	b, err := json.Marshal(locations)
 	if err != nil {
 		logrus.Errorln(fmt.Sprintf("%s with error: %s", "could not marshal to json", err))
@@ -24,7 +24,7 @@ var RepositoryPersistToDisk model.FuncPersist = func(connectionString string, lo
 
 }
 
-var RepositoryInitFromDisk model.FuncInit = func(connectionString string, initializeLocations func(locations []model.NamedLocation)) {
+var RepositoryInitFromDisk model.FuncInitNamedLocations = func(connectionString string, initializeLocations func(locations []model.NamedLocation)) {
 	b, err := ioutil.ReadFile(connectionString)
 	if err != nil {
 		logrus.Errorln(fmt.Sprintf("%s with error: %s", "could not read file", err))
