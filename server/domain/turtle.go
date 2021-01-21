@@ -7,14 +7,16 @@ import (
 
 type Turtle struct {
 	sync.Mutex
-	ID           string
-	features     []TurtleFeature
-	x, y, z      int
-	direction    Direction
-	waiting      bool
-	lastCheckIn  time.Time
-	job          *Job
-	turtleStatus TurtleStatus
+	ID               string
+	features         []TurtleFeature
+	x, y, z          int
+	direction        Direction
+	waiting          bool
+	lastCheckIn      time.Time
+	job              *Job
+	parking          NamedLocation
+	parkingDirection Direction
+	turtleStatus     TurtleStatus
 }
 
 type TurtleStatus string

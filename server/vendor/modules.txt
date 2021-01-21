@@ -1,3 +1,6 @@
+# github.com/google/uuid v1.1.5
+## explicit
+github.com/google/uuid
 # github.com/sirupsen/logrus v1.7.0
 ## explicit
 github.com/sirupsen/logrus

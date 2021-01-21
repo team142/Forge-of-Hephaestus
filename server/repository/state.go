@@ -1,6 +1,9 @@
 package repository
 
-import "github.com/team142/Forge-of-Hephaestus/server/persistence"
+import (
+	"github.com/team142/Forge-of-Hephaestus/server/domain"
+	"github.com/team142/Forge-of-Hephaestus/server/persistence"
+)
 
 const orchestrationFilesPath = "state/orch"
 
@@ -16,6 +19,12 @@ func NewState() *State {
 			persistence.RepositoryOrchestrationsInitFromDisk,
 			persistence.RepositoryOrchestrationsPersistToDisk,
 		),
+	}
+	domain.GlobalLocations = domain.StaticLocations{
+		TNLDropOff:         result.OffloadRepo.GetAll()[0],
+		TNLRefuel:          result.RefuelRepo.GetAll()[0],
+		TNLLeaveGarageSpot: domain.NamedLocation{},
+		TNLGarageEntrance:  domain.NamedLocation{},
 	}
 	return result
 }

@@ -8,14 +8,21 @@
   "jobType": "JOB_HARVEST_WHEAT",
   "spec": {
     "everySeconds": 1800,
-    "startLocation": {
-      "name": "wheat-farm-1",
-      "x": 100,
-      "y": 100,
-      "z": 100
+    "typedNamedLocations": {
+      "TNL_SEEDS": {
+        "name": "wheat-seeds-n",
+        "x": 100,
+        "y": 100,
+        "z": 100
+      },
+      "TNL_WHEAT": {
+        "name": "wheat-farm-n",
+        "x": 100,
+        "y": 100,
+        "z": 100
+      }
     },
     "metaIntegers": {
-      "yLevel": 60,
       "width": 10,
       "length": 29,
       "getSeeds": 290,
