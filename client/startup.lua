@@ -1,8 +1,14 @@
+local function isempty(s)
+  return s == nil or s == ''
+end
+
 print("-----------")
 local x
 local y
 local z
 local orientation = ""
+local ID = turtle.getComputerID()
+local label = turtle.getComputerLabel()
 
 -- Get ID
 print(">> Getting computer ID")
@@ -12,6 +18,12 @@ print("   ")
 -- Get GPS
 print(">> Getting x, y, z")
 x,y,z = gps.locate()
+if isempty(x) then
+    print(x .. " is nil. Shutting down")
+    return
+end
+-- TODO: if anything here is null, the satellite is DOWN
+
 print(x .. ", " ..  y .. ", " .. z)
 print("   ")
 sleep(1)

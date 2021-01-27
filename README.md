@@ -5,6 +5,14 @@ roles captured as declarative configuration.
 
 Turtles must be able to recover from de-syncs, reconnects and server restarts.
 
+
+# Golden path
+
+
+# Misc
+Server - websocket server
+Startup.lua - 
+
 ## Server
 
 To do
@@ -47,13 +55,7 @@ To do
 
 - Lib: ws client ***
 - Lib: correlation ID and return on OK ***
-- Lib: Get coords ***
-- Lib: Get name ***
-- Lib: Get orientation ***
-- Lib: Get fuel ***
-- Lib: Get features ***
-- Comms: Ping ***
-- Comms: sign in (name, coords, features, orientation) ***
+- Comms: sign in (label, ID, coords, orientation) ***
 - Comms: tell server task is Done ***
 - Lib: patiently move forward ***
 - Lib: aggressively move forward ***
