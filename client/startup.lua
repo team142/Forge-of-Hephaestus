@@ -2,7 +2,7 @@ print("-----------")
 local x
 local y
 local z
-local orientation
+local orientation = ""
 
 -- Get ID
 print(">> Getting computer ID")
@@ -33,7 +33,7 @@ while orientation == "" do
         if z > z2 then
             print("facing north")
             orientation = "NORTH"
-        elseif x < x2 then
+        elseif z < z2 then
             print("facing south")
             orientation = "SOUTH"
         end
@@ -56,7 +56,7 @@ while orientation == "" do
             if z < z2 then
                 print("facing north")
                 orientation = "NORTH"
-            elseif x > x2 then
+            elseif z > z2 then
                 print("facing south")
                 orientation = "SOUTH"
             end
